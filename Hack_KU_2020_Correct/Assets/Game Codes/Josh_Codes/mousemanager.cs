@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class mousemanager : MonoBehaviour
 {
-    public GameObject Spawnthings;
+    [SerializeField]
+    private GameObject Spawnthings;
 
+    [SerializeField]
+    private KeyCode newObjectHotKey = KeyCode.A;
+
+    private GameObject CurrentPlaceableObject;
+    private float mousewheelrotation = 10f;
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        //has the mouse been click
+      /*  //has the mouse been click
         if (Input.GetMouseButtonDown(0) && !(Input.GetKey(KeyCode.C)))
         {
           //button clicked
@@ -46,5 +52,54 @@ public class mousemanager : MonoBehaviour
              }
            }
         }
+        */
+        HandleNewObjectHotKey();
+        if (CurrentPlaceableObject != null)
+        {
+          moveObjecttomouse();
+          Rotatefrommousewheel();
+          ReleaseIfClicked();
+        }
+    }
+
+    private void HandleNewObjectHotKey()
+    {
+      if (Input.GetKeyDown(newObjectHotKey))
+      {
+        if (CurrentPlaceableObject == null)
+        {
+          CurrentPlaceableObject = Instantiate(Spawnthings);
+        }
+        else
+        {
+          Destroy(CurrentPlaceableObject);
+        }
+      }
+    }
+
+    private void moveObjecttomouse()
+    {
+      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+      RaycastHit hitInfo;
+      if (Physics.Raycast(ray, out hitInfo))
+       {
+        CurrentPlaceableObject.transform.position = hitInfo.point;
+        CurrentPlaceableObject.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+      }
+    }
+
+    private void Rotatefrommousewheel()
+    {
+      Debug.Log(Input.mouseScrollDelta);
+      mousewheelrotation += Input.mouseScrollDelta.y;
+      CurrentPlaceableObject.transform.Rotate(Vector3.up, mousewheelrotation * 10f);
+    }
+
+    private void ReleaseIfClicked()
+    {
+      if (Input.GetMouseButtonDown(0))
+      {
+        CurrentPlaceableObject = null;
+      }
     }
 }
