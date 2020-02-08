@@ -45,8 +45,27 @@ public class PlayerStat
     }
     public bool RemoveModifier(StatModifier mod)
     {
-        needsUpdate = true;
-        return(statModifiers.Remove(mod));
+        if (statModifiers.Remove(mod)){
+            needsUpdate = true;
+            return true;
+        }
+        return false;
+    }
+
+    public bool RemoveAllModifiersFromSource(object source) {
+
+        bool removed = false;
+
+        for (int i = statModifiers.Count - 1; i >= 0; i--) {
+            if (statModifiers[i].Source == source)
+            {
+                needsUpdate = true;
+                removed = true;
+                statModifiers.RemoveAt(i);
+            }
+        }
+
+        return removed;
     }
 
     private float CalculateFinalValue()
