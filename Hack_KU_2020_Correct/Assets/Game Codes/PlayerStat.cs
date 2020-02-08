@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System;
 
 public class PlayerStat
@@ -7,7 +8,8 @@ public class PlayerStat
     public float Value 
     {
         get {
-            if (needsUpdate) {
+            if (needsUpdate || BaseValue != lastBaseValue) {
+                lastBaseValue = BaseValue;
                 _value = CalculateFinalValue();
                 needsUpdate = false;
             }
@@ -17,13 +19,16 @@ public class PlayerStat
 
     private bool needsUpdate = true;
     private float _value;
+    private float lastBaseValue = float.MinValue;
 
     private readonly List<StatModifier> statModifiers;
+    public readonly ReadOnlyCollection<StatModifier> StatModifiers;
 
     public PlayerStat(float baseValue)
     {
         BaseValue = baseValue;
         statModifiers = new List<StatModifier>();
+        StatModifiers = statModifiers.AsReadOnly();
     }
 
     public void AddModifier(StatModifier mod)
