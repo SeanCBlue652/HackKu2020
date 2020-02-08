@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class startPress : MonoBehaviour
+public class exitPress : MonoBehaviour
 {
-    public GameObject start = null;
+    public GameObject exit = null;
 
     Ray ray;
     RaycastHit hit;
@@ -15,11 +15,10 @@ public class startPress : MonoBehaviour
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            print(hit.collider.name);
-            if (hit.collider.gameObject == start)
+            if (hit.collider.gameObject == exit)
             {
-                print ("hit");
-                SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Single);
+                print("hit2");
+                Application.Quit();
             }
         }
     }
