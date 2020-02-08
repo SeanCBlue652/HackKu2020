@@ -6,11 +6,18 @@ using Sean.CharacterStats;
 public class handleStats : MonoBehaviour
 {
    public PlayerStat Funds;
+   public PlayerStat Power;
    
    public GameObject FundStat;
+   public GameObject PowerStat;
     void Start()
     {
-        FundStat.GetComponent<UpdateStatText>().updateText("Funds: "+Funds.Value);
+        writeUpdatedText(Funds, FundStat, "Funds: ");
+        writeUpdatedText(Power, PowerStat, "Power: ");
+    }
+
+    private void writeUpdatedText(PlayerStat _stat, GameObject _object, string _text) {
+        _object.GetComponent<UpdateStatText>().updateText(_text+_stat.Value);
     }
 
 }
