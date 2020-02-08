@@ -21,9 +21,9 @@ public class mousemanager : MonoBehaviour
           //button clicked
           //is it over somthing
 
-          Camera theCamra = Camera.main;
+          Camera theCamera = Camera.main;
 
-          Ray ray = theCamra.ScreenPointToRay(Input.mousePosition );
+          Ray ray = theCamera.ScreenPointToRay(Input.mousePosition );
           RaycastHit hitInfo;
 
           if (Physics.Raycast(ray, out hitInfo))
