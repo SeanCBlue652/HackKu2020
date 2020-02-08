@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System;
 
+[Serializable]
 public class PlayerStat
 {
     public float BaseValue;
@@ -17,11 +18,11 @@ public class PlayerStat
         }
     }
 
-    private bool needsUpdate = true;
-    private float _value;
-    private float lastBaseValue = float.MinValue;
+    protected bool needsUpdate = true;
+    protected float _value;
+    protected float lastBaseValue = float.MinValue;
 
-    private readonly List<StatModifier> statModifiers;
+    protected readonly List<StatModifier> statModifiers;
     public readonly ReadOnlyCollection<StatModifier> StatModifiers;
 
     public PlayerStat(float baseValue)
@@ -31,14 +32,14 @@ public class PlayerStat
         StatModifiers = statModifiers.AsReadOnly();
     }
 
-    public void AddModifier(StatModifier mod)
+    public virtual void AddModifier(StatModifier mod)
     {
         needsUpdate = true;
         statModifiers.Add(mod);
         statModifiers.Sort(CompareModifierOrder);
     }
 
-    private int CompareModifierOrder(StatModifier a, StatModifier b)
+    protected virtual int CompareModifierOrder(StatModifier a, StatModifier b)
     {
         if (a.Order < b.Order) {
             return -1;
@@ -48,7 +49,7 @@ public class PlayerStat
         }
         return 0;
     }
-    public bool RemoveModifier(StatModifier mod)
+    public virtual bool RemoveModifier(StatModifier mod)
     {
         if (statModifiers.Remove(mod)){
             needsUpdate = true;
@@ -57,7 +58,7 @@ public class PlayerStat
         return false;
     }
 
-    public bool RemoveAllModifiersFromSource(object source) {
+    public virtual bool RemoveAllModifiersFromSource(object source) {
 
         bool removed = false;
 
@@ -73,7 +74,7 @@ public class PlayerStat
         return removed;
     }
 
-    private float CalculateFinalValue()
+    protected virtual float CalculateFinalValue()
     {
         float finalValue = BaseValue;
         float sumPercentAdd = 0;
