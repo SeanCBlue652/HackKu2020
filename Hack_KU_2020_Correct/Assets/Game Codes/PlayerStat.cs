@@ -25,11 +25,15 @@ public class PlayerStat
     protected readonly List<StatModifier> statModifiers;
     public readonly ReadOnlyCollection<StatModifier> StatModifiers;
 
-    public PlayerStat(float baseValue)
+    public PlayerStat()
     {
-        BaseValue = baseValue;
         statModifiers = new List<StatModifier>();
         StatModifiers = statModifiers.AsReadOnly();
+    }
+
+    public PlayerStat(float baseValue) : this()
+    {
+        BaseValue = baseValue;
     }
 
     public virtual void AddModifier(StatModifier mod)
