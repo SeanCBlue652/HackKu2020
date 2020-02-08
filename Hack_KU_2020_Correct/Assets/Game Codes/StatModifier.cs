@@ -1,7 +1,8 @@
 ﻿///using System.Collections;
 ///using System.Collections.Generic;
 //using UnityEngine;
-
+namespace Sean.CharacterStats
+{
 public enum StatModType
 {
     Flat=100, 
@@ -29,4 +30,5 @@ public class StatModifier
     public StatModifier(float value, StatModType type, int order) : this (value, type, order, null) {}
 
     public StatModifier(float value, StatModType type, object source) : this (value, type, (int)type, source) {}
+}
 }
