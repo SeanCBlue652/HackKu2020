@@ -2,6 +2,8 @@
 using System.Collections.ObjectModel;
 using System;
 
+namespace Sean.CharacterStats
+{
 [Serializable]
 public class PlayerStat
 {
@@ -111,4 +113,5 @@ public class PlayerStat
 
         return (float)Math.Round(finalValue, 4);
     }
+}
 }
