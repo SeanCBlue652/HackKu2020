@@ -10,7 +10,7 @@ public class gridholder2 : MonoBehaviour
     private float tilesize = 1;
 
 
-    public GameObject plains911;
+    public GameObject plains;
     // Start is called before the first frame update
     void Start()
     {
