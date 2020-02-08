@@ -52,6 +52,7 @@ public class PlayerStats
     private float CalculateFinalValue()
     {
         float finalValue = BaseValue;
+        float sumPercentAdd = 0;
 
         StatModifier mod = null;
 
@@ -63,7 +64,16 @@ public class PlayerStats
             {
                 finalValue += mod.Value;
             }
-            else if (mod.Type == StatModType.Percent)
+            else if (mod.Type == StatModType.PercentAdd)
+            {
+                sumPercentAdd += mod.Value;
+
+                if (i + 1 >= statModifiers.Count || statModifiers[i+1].Type != StatModType.PercentAdd) {
+                    finalValue *= 1 + sumPercentAdd;
+                    sumPercentAdd = 0;
+                }
+            }
+            else if (mod.Type == StatModType.PercentMult)
             {
                 finalValue *= 1 + mod.Value;
             }
