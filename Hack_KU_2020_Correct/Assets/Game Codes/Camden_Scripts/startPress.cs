@@ -10,7 +10,7 @@ public class startPress : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
-    void OnMouseDown()
+    public void OnMouseDown()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
