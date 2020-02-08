@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 
-public class PlayerStats
+public class PlayerStat
 {
     public float BaseValue;
     public float Value 
@@ -20,7 +20,7 @@ public class PlayerStats
 
     private readonly List<StatModifier> statModifiers;
 
-    public PlayerStats(float baseValue)
+    public PlayerStat(float baseValue)
     {
         BaseValue = baseValue;
         statModifiers = new List<StatModifier>();
