@@ -5,8 +5,8 @@ using UnityEngine;
 public class gridholder2 : MonoBehaviour
 {
 
-    private int rows = 400;
-    private int cols = 400;
+    private int rows = 200;
+    private int cols = 200;
     private float tilesize = 1;
 
 
@@ -29,7 +29,7 @@ public class gridholder2 : MonoBehaviour
           float posX = col * tilesize;
           float posY = row * -tilesize;
 
-          tile.transform.position = new Vector3(posY, 0, posX);
+          tile.transform.position = new Vector3(posY, 1, posX);
         }
       }
       Destroy(referenceTile);

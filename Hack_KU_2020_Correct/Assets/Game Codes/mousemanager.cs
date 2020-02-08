@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class mousemanager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     public GameObject Spawnthings;
 
     // Update is called once per frame
     void Update()
     {
         //has the mouse been click
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !(Input.GetKey(KeyCode.C)))
         {
           //button clicked
           //is it over somthing
@@ -35,6 +29,22 @@ public class mousemanager : MonoBehaviour
 
             Instantiate(Spawnthings,spawnspot, Quaternion.identity);
           }
+        }
+
+        if (Input.GetKey(KeyCode.C) && Input.GetMouseButtonDown(0))
+        {
+          Camera theCamra = Camera.main;
+           RaycastHit hit;
+           Ray ray = theCamra.ScreenPointToRay(Input.mousePosition );
+           if (Physics.Raycast(ray, out hit))
+           {
+             //Debug.Log("yes, hit " + hit.collider.gameObject.name);
+             BoxCollider bc = hit.collider as BoxCollider;
+             if (bc != null )
+             {
+               Destroy(bc.gameObject);
+             }
+           }
         }
     }
 }
