@@ -1612,7 +1612,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 0}
-  GameSceneName: 
 --- !u!64 &338174792
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1860,6 +1859,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlacementObject: {fileID: 964825001}
   StatsHandler: {fileID: 520317855}
+  Stats: {fileID: 520317856}
+  MouseManager: {fileID: 964825003}
 --- !u!4 &405306507
 Transform:
   m_ObjectHideFlags: 0

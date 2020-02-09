@@ -7,7 +7,7 @@ public class startPress : MonoBehaviour
 {
     public GameObject start = null;
 
-    private bool started = (SceneManager.GetActiveScene().name == "Sean_Main");
+
     //public string GameSceneName;
 
     Ray ray;
@@ -15,7 +15,7 @@ public class startPress : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!started)
+        if (!(SceneManager.GetActiveScene().name == "Sean_Main"))
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -26,7 +26,6 @@ public class startPress : MonoBehaviour
                     if (hit.collider.gameObject == start)
                     {
                         print("hit");
-                        started = true;
                         SceneManager.LoadScene("Sean_Main", LoadSceneMode.Single);
                     }
                 }

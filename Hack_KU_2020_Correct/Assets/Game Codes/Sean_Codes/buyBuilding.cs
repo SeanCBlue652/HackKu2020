@@ -29,7 +29,7 @@ public class buyBuilding : MonoBehaviour
 
     public void buyRoadStraight()
     {
-        _handler.shopCheckout(BuildingType.Road_Straight, Instantiate(RoadStraight));
+        _handler.shopCheckout(BuildingType.Road_Straight, (GameObject)Instantiate(RoadStraight));
     }
     public void buyRoadCross()
     {

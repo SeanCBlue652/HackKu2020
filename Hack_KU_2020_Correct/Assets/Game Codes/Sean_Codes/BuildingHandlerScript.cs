@@ -26,6 +26,8 @@ namespace Sean.BuildingPackage
 
         public GameObject PlacementObject;
         public GameObject StatsHandler;
+        public handleStats Stats;
+        public mousemanager MouseManager;
         private handleStats _stats;
         private mousemanager placementManager;
         private readonly List<Building> _buildingList;
@@ -35,8 +37,8 @@ namespace Sean.BuildingPackage
         {
             _buildingList = new List<Building>();
             BuildingList = _buildingList.AsReadOnly();
-            _stats = StatsHandler.GetComponent<handleStats>();
-            placementManager = PlacementObject.GetComponent<mousemanager>();
+            _stats = Stats;
+            placementManager = MouseManager;
         }
 
         private void updateCurrentPlacementBuilding(GameObject _object)
@@ -80,7 +82,7 @@ namespace Sean.BuildingPackage
             switch (_type)
             {
                 case BuildingType.Road_Straight:
-                    _building = new Building(GameObject.Find(_object.name), 5f, 0f, 0f, 1f, StatsHandler);
+                    _building = new Building(_object, 5f, 0f, 0f, 1f, StatsHandler);
                     _buildingList.Add(_building);
                     placementManager.setspawnthing(_building.GettheBuilding());
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
