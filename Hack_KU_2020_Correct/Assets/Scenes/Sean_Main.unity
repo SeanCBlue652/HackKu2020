@@ -279,51 +279,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e89437017344014b875d90cd242b6e9, type: 3}
---- !u!4 &25141247
+--- !u!4 &25141247 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6866096821821962155, guid: 9e89437017344014b875d90cd242b6e9,
+    type: 3}
   m_PrefabInstance: {fileID: 25141246}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57735919}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 46586221}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &46586220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 25141246}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 46586221}
-  m_Layer: 0
-  m_Name: plains (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &46586221
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 25141246}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46586220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 25141247}
-  m_Father: {fileID: 1880256106}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &47053757
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,22 +362,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47053757}
   m_CullTransparentMesh: 0
---- !u!1 &57735919
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 25141246}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 25141247}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &59392185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,6 +1750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 520317857}
   - component: {fileID: 520317856}
+  - component: {fileID: 520317858}
   m_Layer: 0
   m_Name: StatsHandler
   m_TagString: Untagged
@@ -1850,6 +1796,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &520317858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520317855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ee1d0271fdbf14199cddc0baa2e954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PowerStatHandler: {fileID: 520317855}
 --- !u!1 &589399256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,23 +3504,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146350402}
   m_CullTransparentMesh: 0
---- !u!1 &1221661430
+--- !u!1 &1221661430 stripped
 GameObject:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 6866096821821962151, guid: 9e89437017344014b875d90cd242b6e9,
     type: 3}
   m_PrefabInstance: {fileID: 25141246}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1221661431}
-  m_Layer: 0
-  m_Name: 
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!4 &1221661431
 Transform:
   m_ObjectHideFlags: 0
@@ -5323,7 +5271,7 @@ Transform:
   m_LocalPosition: {x: 726.0859, y: 418.6232, z: -193.54207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 46586221}
+  - {fileID: 25141247}
   - {fileID: 1700113700}
   - {fileID: 1806994680}
   - {fileID: 654857023}
