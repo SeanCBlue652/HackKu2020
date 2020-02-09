@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class mousemanager : MonoBehaviour
 {
+    void Start()
+    {
+      for (int i = 0; i < Buildingparts.lenght; i++)
+      {
+        GameObject Buildings = Buildingparts[i];
+        GameObject buttonGameObject = (GameObject)Instantiate(Buildingparts, this.transform);
+        theButton.onClick.AddListener( () => {Spawnthings = Buildings;} );
+      }
+    }
+
     [SerializeField]
     private GameObject Spawnthings;
 
@@ -12,6 +22,9 @@ public class mousemanager : MonoBehaviour
 
     private GameObject CurrentPlaceableObject;
     private float mousewheelrotation = 10f;
+//-------------------------------------------------------------------------------
+    public GameObject[] Buildingparts;
+
     // Update is called once per frame
     private void Update()
     {
@@ -66,13 +79,13 @@ public class mousemanager : MonoBehaviour
     {
       if (Input.GetKeyDown(newObjectHotKey))
       {
-        if (CurrentPlaceableObject != KeyCode.Mouse1)
+        if (CurrentPlaceableObject != null)
         {
-          Destroy(CurrentPlaceableObject);
+            Destroy(CurrentPlaceableObject);
         }
         else
         {
-            CurrentPlaceableObject = Instantiate(Spawnthings );
+          CurrentPlaceableObject = Instantiate(Spawnthings);
         }
       }
     }
@@ -80,13 +93,11 @@ public class mousemanager : MonoBehaviour
     private void moveObjecttomouse()
     {
       CurrentPlaceableObject.layer = 2;
-<<<<<<< HEAD
+
       Camera theCamera = Camera.main;
 
       Ray ray = theCamera.ScreenPointToRay(Input.mousePosition);
-=======
-      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
->>>>>>> cede023ab01e8a38add5d2ceb96fb57b2e27d281
+
       RaycastHit hitInfo;
       if (Physics.Raycast(ray, out hitInfo))
        {
