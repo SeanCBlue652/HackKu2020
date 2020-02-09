@@ -6,12 +6,12 @@ public class mousemanager : MonoBehaviour
 {
     void Start()
     {
-      for (int i = 0; i < Buildingparts.lenght(); i++)
+      /*for (int i = 0; i < Buildingparts.Length; i++)
       {
         GameObject Buildings = Buildingparts[i];
         GameObject buttonGameObject = (GameObject)Instantiate(Buildingparts, this.transform);
         theButton.onClick.AddListener( () => {Spawnthings = Buildings;} );
-      }
+      }*/
     }
 
     [SerializeField]
@@ -29,7 +29,7 @@ public class mousemanager : MonoBehaviour
     public void setspawnthing(GameObject inputbulding)
     {
       Spawnthings = inputbulding;
-
+      
     }
     // Update is called once per frame
     private void Update()
