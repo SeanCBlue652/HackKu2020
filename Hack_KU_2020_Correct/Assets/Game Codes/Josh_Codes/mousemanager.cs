@@ -29,7 +29,7 @@ public class mousemanager : MonoBehaviour
     public void setspawnthing(GameObject inputbulding)
     {
       Spawnthings = inputbulding;
-      
+      print(Spawnthings);
     }
     // Update is called once per frame
     private void Update()
