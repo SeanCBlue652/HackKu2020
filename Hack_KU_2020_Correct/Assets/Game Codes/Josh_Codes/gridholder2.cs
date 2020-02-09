@@ -19,7 +19,7 @@ public class gridholder2 : MonoBehaviour
 
     private void GenerateGrid()
     {
-      GameObject referenceTile = (GameObject)Instantiate(Resources.Load("plains911"));
+      GameObject referenceTile = (GameObject)Instantiate(Resources.Load("plains"));
       for (int row = 0 ; row < rows ; row++)
       {
         for (int col = 0 ; col < cols; col++)
