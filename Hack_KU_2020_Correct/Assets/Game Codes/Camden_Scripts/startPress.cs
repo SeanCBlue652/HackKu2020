@@ -19,13 +19,8 @@ public class startPress : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-<<<<<<< HEAD
-                //print(hit.collider.name);
-                if (hit.collider.gameObject == start)
-=======
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit))
->>>>>>> c793e2e44ada0fecf737864094fea86c323c5ff7
                 {
                     print(hit.collider.name);
                     if (hit.collider.gameObject == start)
