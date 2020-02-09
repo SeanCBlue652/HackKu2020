@@ -360,6 +360,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 44068657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &44068659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: cd3d807970a898e4c9d755be0dadf9b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 44068657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &47053757
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +779,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 98487868}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buyApartment
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &98487871
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -994,7 +1011,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 123729869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buyWarehouse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &123729869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2047,6 +2075,7 @@ GameObject:
   - component: {fileID: 497556048}
   - component: {fileID: 497556047}
   - component: {fileID: 497556049}
+  - component: {fileID: 497556050}
   m_Layer: 5
   m_Name: MenuHandler
   m_TagString: Untagged
@@ -2116,6 +2145,30 @@ MonoBehaviour:
   powerMenu: {fileID: 247663456}
   powerDisplay: {fileID: 1063995882}
   closePowerMenu: {fileID: 2022106017}
+--- !u!114 &497556050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497556045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6609a39679652974581059d5378385c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoadStraight: {fileID: 574807002}
+  RoadCross: {fileID: 535740807}
+  RoadCorner: {fileID: 1608342592}
+  RoadTee: {fileID: 1547183695}
+  CoalPower: {fileID: 1033418297}
+  Warehouse: {fileID: 44068659}
+  Watertower: {fileID: 876216652}
+  House: {fileID: 1791181178}
+  House2: {fileID: 755054916}
+  Skyscraper: {fileID: 1885068770}
+  Apartment: {fileID: 1308540417}
+  BuildingHandler: {fileID: 405306505}
 --- !u!1 &520317855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,6 +2238,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PowerStatHandler: {fileID: 520317855}
+  GainTxtBox: {fileID: 0}
+  LossTxtBox: {fileID: 0}
+  NetTxtBox: {fileID: 0}
 --- !u!1001 &535740805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2260,6 +2316,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 535740805}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &535740807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: c7b62ea4205527f409dd83aa0302c1d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 535740805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &574807000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2332,6 +2394,12 @@ PrefabInstance:
 --- !u!4 &574807001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: cb01efb36fb3cb64fb6906cf9ced807b,
+    type: 3}
+  m_PrefabInstance: {fileID: 574807000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &574807002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: cb01efb36fb3cb64fb6906cf9ced807b,
     type: 3}
   m_PrefabInstance: {fileID: 574807000}
   m_PrefabAsset: {fileID: 0}
@@ -2514,7 +2582,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 600751706}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buySkyscraper
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &600751706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2650,7 +2729,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 615745362}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buyHouse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &615745362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2792,7 +2882,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 704374881}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buyCoalPower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &704374881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2898,6 +2999,12 @@ PrefabInstance:
 --- !u!4 &755054915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 39318de9be328b142a671bd54b96b541,
+    type: 3}
+  m_PrefabInstance: {fileID: 755054914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &755054916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 39318de9be328b142a671bd54b96b541,
     type: 3}
   m_PrefabInstance: {fileID: 755054914}
   m_PrefabAsset: {fileID: 0}
@@ -3095,7 +3202,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 818203759}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buyRoadTee
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &818203759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3448,6 +3566,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 876216650}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &876216652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 26f8406e89e507949b0194e78aaa2b26,
+    type: 3}
+  m_PrefabInstance: {fileID: 876216650}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &877233520
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,7 +3798,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 990308279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buyHouse2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &990308279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3780,6 +3915,12 @@ PrefabInstance:
 --- !u!4 &1033418296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 906034c4e018dfb40976e4888b512ba7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1033418295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1033418297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 906034c4e018dfb40976e4888b512ba7,
     type: 3}
   m_PrefabInstance: {fileID: 1033418295}
   m_PrefabAsset: {fileID: 0}
@@ -4286,6 +4427,12 @@ PrefabInstance:
 --- !u!4 &1308540416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 72bbf656108a2ef4f9ceedeb2e1333a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1308540415}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1308540417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 72bbf656108a2ef4f9ceedeb2e1333a0,
     type: 3}
   m_PrefabInstance: {fileID: 1308540415}
   m_PrefabAsset: {fileID: 0}
@@ -5062,7 +5209,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1506850147}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buyWatertower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1506850147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5390,6 +5548,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1547183693}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1547183695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 64dd28ce68491f845a051d26c9f12f8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1547183693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1607523117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5608,6 +5772,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1608342590}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1608342592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: d6a076ac9b576b8468d50be9faa63742,
+    type: 3}
+  m_PrefabInstance: {fileID: 1608342590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1679296927
 GameObject:
   m_ObjectHideFlags: 0
@@ -5710,7 +5880,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1679296931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buyRoadStraight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1679296931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5939,6 +6120,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1791181176}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1791181178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0c8dcea26fa2db44d881e9f437c606a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1791181176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1806994680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3034023035702387016, guid: ebacfd1454585724a84736dfb190f266,
@@ -6047,7 +6234,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1836776529}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buyRoadCross
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1836776529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6341,6 +6539,12 @@ PrefabInstance:
 --- !u!4 &1885068769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a4b8d58dc0246d5429c70674620cd283,
+    type: 3}
+  m_PrefabInstance: {fileID: 1885068768}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1885068770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a4b8d58dc0246d5429c70674620cd283,
     type: 3}
   m_PrefabInstance: {fileID: 1885068768}
   m_PrefabAsset: {fileID: 0}
@@ -6784,7 +6988,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2011102755}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497556050}
+        m_MethodName: buyRoadCorner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2011102755
 MonoBehaviour:
   m_ObjectHideFlags: 0
