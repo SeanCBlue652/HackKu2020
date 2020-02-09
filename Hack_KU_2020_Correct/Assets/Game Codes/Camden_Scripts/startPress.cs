@@ -18,7 +18,7 @@ public class startPress : MonoBehaviour
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                print(hit.collider.name);
+                //print(hit.collider.name);
                 if (hit.collider.gameObject == start)
                 {
                     print("hit");
