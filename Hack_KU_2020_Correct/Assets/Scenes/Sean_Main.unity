@@ -279,10 +279,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e89437017344014b875d90cd242b6e9, type: 3}
---- !u!4 &25141248 stripped
+--- !u!4 &25141247 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6866096821821962155, guid: 9e89437017344014b875d90cd242b6e9,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 25141246}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &47053757
@@ -1116,6 +1115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 0}
+  GameSceneName: 
 --- !u!64 &338174792
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1147,7 +1147,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eb0a0f0724097a488264c7ae710d4de, type: 2}
+  - {fileID: 2100000, guid: 9f7e3f921d74a0d479e7abb2670167c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2769,6 +2769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawnthings: {fileID: 645179546071331248, guid: 69c62b19bfc8a9a4285a9ab694514c9a,
     type: 3}
+  newObjectHotKey: 97
 --- !u!1 &990308275
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,8 +4420,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 69c62b19bfc8a9a4285a9ab694514c9a, type: 3}
 --- !u!4 &1726732215 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1798282283042217414, guid: 69c62b19bfc8a9a4285a9ab694514c9a,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1726732214}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1756067771
@@ -4838,7 +4838,7 @@ Transform:
   m_LocalPosition: {x: 726.0859, y: 418.6232, z: -193.54207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 25141248}
+  - {fileID: 25141247}
   - {fileID: 919596586}
   - {fileID: 1726732215}
   - {fileID: 964825002}
