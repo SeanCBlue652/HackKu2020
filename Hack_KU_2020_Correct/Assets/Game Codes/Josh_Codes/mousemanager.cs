@@ -29,7 +29,11 @@ public class mousemanager : MonoBehaviour
     public void setspawnthing(GameObject inputbulding)
     {
       Spawnthings = inputbulding;
+<<<<<<< HEAD
+
+=======
       print(Spawnthings);
+>>>>>>> af2e556882dac9f71001773710fce41ab4c9231c
     }
     // Update is called once per frame
     private void Update()
@@ -130,5 +134,11 @@ public class mousemanager : MonoBehaviour
         CurrentPlaceableObject.layer = 0;
         CurrentPlaceableObject = null;
       }
+    }
+
+    private void onCollisionEnter(Collision collision)
+    {
+      Debug.Log("Collided With " + collision.gameObject.name);
+      
     }
 }
