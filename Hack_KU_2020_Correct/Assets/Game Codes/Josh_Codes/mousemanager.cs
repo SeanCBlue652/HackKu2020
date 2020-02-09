@@ -25,6 +25,12 @@ public class mousemanager : MonoBehaviour
 //-------------------------------------------------------------------------------
     public GameObject[] Buildingparts;
 
+
+    public void setspawnthing(GameObject inputbulding)
+    {
+      Spawnthings = inputbulding;
+      
+    }
     // Update is called once per frame
     private void Update()
     {
