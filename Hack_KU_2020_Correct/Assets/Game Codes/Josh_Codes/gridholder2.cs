@@ -19,7 +19,7 @@ public class gridholder2 : MonoBehaviour
 
     private void GenerateGrid()
     {
-      GameObject referenceTile = (GameObject)Instantiate(Resources.Load("plains911"));
+      GameObject referenceTile = (GameObject)Instantiate(Resources.Load("plains"));
       for (int row = 0 ; row < rows ; row++)
       {
         for (int col = 0 ; col < cols; col++)
@@ -29,7 +29,7 @@ public class gridholder2 : MonoBehaviour
           float posX = col * tilesize;
           float posY = row * -tilesize;
 
-          tile.transform.position = new Vector3(posY, 1, posX);
+          tile.transform.position = new Vector3(posY, 100, posX+100);
         }
       }
       Destroy(referenceTile);

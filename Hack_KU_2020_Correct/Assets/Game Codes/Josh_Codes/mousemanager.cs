@@ -4,18 +4,37 @@ using UnityEngine;
 
 public class mousemanager : MonoBehaviour
 {
+    void Start()
+    {
+      /*for (int i = 0; i < Buildingparts.Length; i++)
+      {
+        GameObject Buildings = Buildingparts[i];
+        GameObject buttonGameObject = (GameObject)Instantiate(Buildingparts, this.transform);
+        theButton.onClick.AddListener( () => {Spawnthings = Buildings;} );
+      }*/
+    }
+
     [SerializeField]
     private GameObject Spawnthings;
 
     [SerializeField]
-    private KeyCode newObjectHotKey = KeyCode.A;
+    private KeyCode newObjectHotKey = KeyCode.Mouse1;
 
     private GameObject CurrentPlaceableObject;
     private float mousewheelrotation = 10f;
+//-------------------------------------------------------------------------------
+    public GameObject[] Buildingparts;
+
+
+    public void setspawnthing(GameObject inputbulding)
+    {
+      Spawnthings = inputbulding;
+      
+    }
     // Update is called once per frame
     private void Update()
     {
-      /*  //has the mouse been click
+    /*    //has the mouse been click
         if (Input.GetMouseButtonDown(0) && !(Input.GetKey(KeyCode.C)))
         {
           //button clicked
@@ -36,7 +55,7 @@ public class mousemanager : MonoBehaviour
             Instantiate(Spawnthings,spawnspot, Quaternion.identity);
           }
         }
-
+*/
         if (Input.GetKey(KeyCode.C) && Input.GetMouseButtonDown(0))
         {
           Camera theCamra = Camera.main;
@@ -44,7 +63,7 @@ public class mousemanager : MonoBehaviour
            Ray ray = theCamra.ScreenPointToRay(Input.mousePosition );
            if (Physics.Raycast(ray, out hit))
            {
-             //Debug.Log("yes, hit " + hit.collider.gameObject.name);
+             Debug.Log("yes, hit " + hit.collider.gameObject.name);
              BoxCollider bc = hit.collider as BoxCollider;
              if (bc != null )
              {
@@ -52,7 +71,7 @@ public class mousemanager : MonoBehaviour
              }
            }
         }
-        */
+
         HandleNewObjectHotKey();
         if (CurrentPlaceableObject != null)
         {
@@ -66,23 +85,32 @@ public class mousemanager : MonoBehaviour
     {
       if (Input.GetKeyDown(newObjectHotKey))
       {
-        if (CurrentPlaceableObject == null)
+        if (CurrentPlaceableObject != null)
         {
-          CurrentPlaceableObject = Instantiate(Spawnthings);
+            Destroy(CurrentPlaceableObject);
         }
         else
         {
-          Destroy(CurrentPlaceableObject);
+          CurrentPlaceableObject = Instantiate(Spawnthings);
         }
       }
     }
 
     private void moveObjecttomouse()
     {
-      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+      CurrentPlaceableObject.layer = 2;
+
+      Camera theCamera = Camera.main;
+
+      Ray ray = theCamera.ScreenPointToRay(Input.mousePosition);
+
       RaycastHit hitInfo;
       if (Physics.Raycast(ray, out hitInfo))
        {
+        /* Vector3 spawnspot = hitInfo.collider.transform.position + hitInfo.normal;
+
+         Instantiate(Spawnthings,spawnspot, Quaternion.identity);
+         */
         CurrentPlaceableObject.transform.position = hitInfo.point;
         CurrentPlaceableObject.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
       }
@@ -90,7 +118,7 @@ public class mousemanager : MonoBehaviour
 
     private void Rotatefrommousewheel()
     {
-      Debug.Log(Input.mouseScrollDelta);
+      //Debug.Log(Input.mouseScrollDelta);
       mousewheelrotation += Input.mouseScrollDelta.y;
       CurrentPlaceableObject.transform.Rotate(Vector3.up, mousewheelrotation * 10f);
     }
@@ -99,6 +127,7 @@ public class mousemanager : MonoBehaviour
     {
       if (Input.GetMouseButtonDown(0))
       {
+        CurrentPlaceableObject.layer = 0;
         CurrentPlaceableObject = null;
       }
     }
