@@ -37,8 +37,10 @@ namespace Sean.BuildingPackage
         {
             _buildingList = new List<Building>();
             BuildingList = _buildingList.AsReadOnly();
-            _stats = StatsHandler.GetComponent<handleStats>();
-            placementManager = PlacementObject.GetComponent<mousemanager>();
+        }
+        void Start(){
+            _stats = GameObject.Find("StatsHandler").GetComponentInChildren<handleStats>();
+            placementManager = GameObject.Find("PlacementHandler").GetComponentInChildren<mousemanager>();
         }
 
         private void updateCurrentPlacementBuilding(Building _object)
@@ -118,18 +120,14 @@ namespace Sean.BuildingPackage
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.Skyscraper:
-                    _building = new Building(_object, 1100f, -200f, 0.50f, 140f, StatsHandler);
+                    _building = new Building(_object, 1100f, -200f, 500f, 140f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
-                    _stats.updateFunds(StatModType.Flat, _building.GetBuildingprice(), _building.GettheBuilding());
-                    _stats.updatePower(StatModType.Flat, _building.GetBuildingpower(), _building.GettheBuilding());
-                    _stats.updatePopulation(StatModType.PercentAdd, _building.GetBuildingpower(), _building.GettheBuilding());
-                    _stats.updateIPM(StatModType.Flat, _building.GetBuildingincome(), _building.GettheBuilding());
+                    _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.Coal_Power:
                     _building = new Building(_object, 300f, 100f, 100f, -50f, StatsHandler);
                     _buildingList.Add(_building);
-                    print(_object);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
