@@ -1,5 +1,6 @@
 ﻿//using System.Collections;
 //using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 using Sean.CharacterStats;
 
@@ -51,6 +52,23 @@ public class handleStats : MonoBehaviour
         return result;
     }
 
+    public ReadOnlyCollection<StatModifier> getStatModifiers(string _statName)
+    {
+        if (_statName == "Fund") {
+            return(Funds.StatModifiers);
+        }
+        if (_statName == "Power") {
+            return(Power.StatModifiers);
+        }
+        if (_statName == "Population") {
+            return(Population.StatModifiers);
+        }
+        if (_statName == "Income") {
+            return(InPerMin.StatModifiers);
+        }
+        print("Invalid input for getStatModifiers, returning Fund modifiers by default.");
+        return(Funds.StatModifiers);
+    }
     public void updateFunds(StatModType _type, float _value) {
         StatModifier _mod = new StatModifier(_value, _type);
         Funds.AddModifier(_mod);
