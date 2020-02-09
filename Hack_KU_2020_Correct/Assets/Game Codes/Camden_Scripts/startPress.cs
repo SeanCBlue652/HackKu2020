@@ -11,23 +11,21 @@ public class startPress : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
-    void update()
+    void FixedUpdate()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("MainMenu"))
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
             {
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit))
+                print(hit.collider.name);
+                if (hit.collider.gameObject == start)
                 {
-                    print(hit.collider.name);
-                    if (hit.collider.gameObject == start)
-                    {
-                        print("hit");
-                        SceneManager.LoadScene("Sean_Main", LoadSceneMode.Single);
-                    }
+                    print("hit");
+                    SceneManager.LoadScene("Sean_Main", LoadSceneMode.Single);
                 }
             }
+        
         }
 
     }
