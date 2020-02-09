@@ -2143,6 +2143,7 @@ MonoBehaviour:
   House2: {fileID: 755054916}
   Skyscraper: {fileID: 1885068770}
   Apartment: {fileID: 1308540417}
+  PowerLine: {fileID: 1945380993}
   BuildingHandler: {fileID: 405306505}
 --- !u!1 &520317855
 GameObject:
@@ -2420,7 +2421,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 497556050}
-        m_MethodName: buyApartment
+        m_MethodName: buyPowerLine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6795,6 +6796,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1945380993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 8a58babc38c31204e9c6ffd5ae14eb1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 84979781}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1948108290
 GameObject:
   m_ObjectHideFlags: 0

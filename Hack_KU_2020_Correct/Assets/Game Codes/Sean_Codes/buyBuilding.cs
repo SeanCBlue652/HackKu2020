@@ -18,6 +18,7 @@ public class buyBuilding : MonoBehaviour
     public GameObject House2;
     public GameObject Skyscraper;
     public GameObject Apartment;
+    public GameObject PowerLine;
 
     public GameObject BuildingHandler;
     private BuildingHandlerScript _handler;
@@ -70,6 +71,10 @@ public class buyBuilding : MonoBehaviour
     public void buyApartment()
     {
         _handler.shopCheckout(BuildingType.Apartment, (GameObject)Instantiate(Apartment));
+    }
+
+    public void buyPowerLine(){
+        _handler.shopCheckout(BuildingType.Power_Line, (GameObject)Instantiate(PowerLine));
     }
 
 }
