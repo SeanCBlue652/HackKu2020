@@ -40,5 +40,9 @@ public GameObject GetBuilding(Building _building)
     return (_building.GettheBuilding());
 }
 
+public void addBuilding(Building _building) {
+    _buildingList.Add(_building);
+}
+
 
 }
