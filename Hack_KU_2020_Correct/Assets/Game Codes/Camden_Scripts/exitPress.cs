@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿//using System.Collections;
+//using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class exitPress : MonoBehaviour
 {
@@ -10,15 +10,18 @@ public class exitPress : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
-    void OnMouseDown()
+    void Update()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
+        if (Input.GetMouseButtonDown(0))
         {
-            if (hit.collider.gameObject == exit)
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
             {
-                print("hit2");
-                Application.Quit();
+                if (hit.collider.gameObject == exit)
+                {
+                    print("hit2");
+                    Application.Quit();
+                }
             }
         }
     }

@@ -13,15 +13,19 @@ public class startPress : MonoBehaviour
 
     void Update()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
+        if (Input.GetMouseButtonDown(0))
         {
-            print(hit.collider.name);
-            if (hit.collider.gameObject == start)
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
             {
-                print ("hit");
-                SceneManager.LoadScene(GameSceneName, LoadSceneMode.Single);
+                print(hit.collider.name);
+                if (hit.collider.gameObject == start)
+                {
+                    print("hit");
+                    SceneManager.LoadScene(GameSceneName, LoadSceneMode.Single);
+                }
             }
         }
+
     }
 }
