@@ -33,43 +33,43 @@ public class buyBuilding : MonoBehaviour
     }
     public void buyRoadCross()
     {
-        _handler.shopCheckout(BuildingType.Road_Cross, Instantiate(RoadCross));
+        _handler.shopCheckout(BuildingType.Road_Cross, (GameObject)Instantiate(RoadCross));
     }
     public void buyRoadCorner()
     {
-        _handler.shopCheckout(BuildingType.Road_Corner, Instantiate(RoadCorner));
+        _handler.shopCheckout(BuildingType.Road_Corner, (GameObject)Instantiate(RoadCorner));
     }
     public void buyRoadTee()
     {
-        _handler.shopCheckout(BuildingType.Road_Tee, Instantiate(RoadTee));
+        _handler.shopCheckout(BuildingType.Road_Tee, (GameObject)Instantiate(RoadTee));
     }
     public void buyCoalPower()
     {
-        _handler.shopCheckout(BuildingType.Coal_Power, Instantiate(CoalPower));
+        _handler.shopCheckout(BuildingType.Coal_Power, (GameObject)Instantiate(CoalPower));
     }
     public void buyWatertower()
     {
-        _handler.shopCheckout(BuildingType.Watertower, Instantiate(Watertower));
+        _handler.shopCheckout(BuildingType.Watertower, (GameObject)Instantiate(Watertower));
     }
     public void buyWarehouse()
     {
-        _handler.shopCheckout(BuildingType.Warehouse, Instantiate(Warehouse));
+        _handler.shopCheckout(BuildingType.Warehouse, (GameObject)Instantiate(Warehouse));
     }
     public void buyHouse()
     {
-        _handler.shopCheckout(BuildingType.House, Instantiate(House));
+        _handler.shopCheckout(BuildingType.House, (GameObject)Instantiate(House));
     }
     public void buyHouse2()
     {
-        _handler.shopCheckout(BuildingType.House_Alt, Instantiate(House2));
+        _handler.shopCheckout(BuildingType.House_Alt, (GameObject)Instantiate(House2));
     }
     public void buySkyscraper()
     {
-        _handler.shopCheckout(BuildingType.Skyscraper, Instantiate(Skyscraper));
+        _handler.shopCheckout(BuildingType.Skyscraper, (GameObject)Instantiate(Skyscraper));
     }
     public void buyApartment()
     {
-        _handler.shopCheckout(BuildingType.Apartment, Instantiate(Apartment));
+        _handler.shopCheckout(BuildingType.Apartment, (GameObject)Instantiate(Apartment));
     }
 
 }
