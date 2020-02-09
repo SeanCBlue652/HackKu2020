@@ -613,7 +613,6 @@ GameObject:
   - component: {fileID: 490525352}
   - component: {fileID: 490525351}
   - component: {fileID: 490525350}
-  - component: {fileID: 490525354}
   m_Layer: 0
   m_Name: Special
   m_TagString: Untagged
@@ -695,20 +694,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
---- !u!114 &490525354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490525349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f11b57c1744aaf348bc193893a40a1f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  watertower: {fileID: 907116627}
-  special: {fileID: 490525349}
 --- !u!1 &673457818
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,7 +755,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 673457818}
-  GameSceneName: Sean_Main
 --- !u!65 &673457822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1211,7 +1195,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 231288224}
-  GameSceneName: 
 --- !u!1 &907116627 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2534866581884222612, guid: 26f8406e89e507949b0194e78aaa2b26,
@@ -1232,6 +1215,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -2432090755550338912, guid: 26f8406e89e507949b0194e78aaa2b26, type: 3}
+--- !u!114 &907116632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907116627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11b57c1744aaf348bc193893a40a1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watertower: {fileID: 907116627}
+  special: {fileID: 490525349}
 --- !u!1001 &908099677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1695,7 +1692,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 2048674842}
-  GameSceneName: 
 --- !u!1001 &1480400828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2707,7 +2703,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 2048674842}
-  GameSceneName: Sean_Main
 --- !u!1 &2068451760 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2534866581884222612, guid: ca016be573a3fb34ba2be959a9818d38,
