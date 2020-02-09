@@ -10,7 +10,8 @@ public class MouseOverDetector : MonoBehaviour
     public GameObject TooltipWindow = null;
     public Text textBox;
     private Vector3 offset = new Vector3(-40, 20, 0);
-    private string tipText = "";//Input Tooltip Text in quotations here
+    private string tipText = "";
+    private string objHover = "";
     Ray ray;
     RaycastHit hit;
 
@@ -29,11 +30,24 @@ public class MouseOverDetector : MonoBehaviour
             {
                 TooltipWindow.gameObject.SetActive(false);
             }
+            objHover = hit.collider.gameObject.name;
         }
         updatetext();
     }
     public void updatetext()
     {
         textBox.text = tipText;
+    }
+    public void objectDetect()
+    {
+        switch (objHover)
+        {
+            case "House":
+            tipText = "this is house 1";
+            break;
+            case "House2":
+            tipText = "this is house 2";
+            break;
+        }
     }
 }
