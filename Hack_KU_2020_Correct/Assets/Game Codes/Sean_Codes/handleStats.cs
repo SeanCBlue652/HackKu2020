@@ -54,7 +54,7 @@ public class handleStats : MonoBehaviour
 
     public ReadOnlyCollection<StatModifier> getStatModifiers(string _statName)
     {
-        if (_statName == "Fund") {
+        if (_statName == "Funds") {
             return(Funds.StatModifiers);
         }
         if (_statName == "Power") {
@@ -66,7 +66,7 @@ public class handleStats : MonoBehaviour
         if (_statName == "Income") {
             return(InPerMin.StatModifiers);
         }
-        print("Invalid input for getStatModifiers, returning Fund modifiers by default.");
+        print("Invalid input for getStatModifiers, returning Funds modifiers by default.");
         return(Funds.StatModifiers);
     }
     public void updateFunds(StatModType _type, float _value) {
