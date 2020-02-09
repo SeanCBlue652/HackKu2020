@@ -34,11 +34,11 @@ public class PowerMenuStatHandler : MonoBehaviour
     void Start()
     {
         //PowerStatHandler = GameObject.Find("StatsHandler");
-        Camden = PowerStatHandler.GetComponent<handleStats>();
-        Camden.updatePower(StatModType.Flat, 1f);
-        Camden.updatePower(StatModType.Flat, 2f);
-        Camden.updatePower(StatModType.Flat, 3f);
-        Camden.updatePower(StatModType.Flat, -4f);
+        //Camden = PowerStatHandler.GetComponent<handleStats>();
+        //Camden.updatePower(StatModType.Flat, 1f);
+        //Camden.updatePower(StatModType.Flat, 2f);
+        //Camden.updatePower(StatModType.Flat, 3f);
+        //Camden.updatePower(StatModType.Flat, -4f);
         _mods = Camden.getStatModifiers("Power");
         for (int i = 0; i < _mods.Count; i++)
         {
