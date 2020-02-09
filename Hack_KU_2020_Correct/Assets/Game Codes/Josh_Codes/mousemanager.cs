@@ -8,7 +8,7 @@ public class mousemanager : MonoBehaviour
     private GameObject Spawnthings;
 
     [SerializeField]
-    private KeyCode newObjectHotKey = KeyCode.A;
+    private KeyCode newObjectHotKey = KeyCode.Mouse1;
 
     private GameObject CurrentPlaceableObject;
     private float mousewheelrotation = 10f;
@@ -66,7 +66,7 @@ public class mousemanager : MonoBehaviour
     {
       if (Input.GetKeyDown(newObjectHotKey))
       {
-        if (CurrentPlaceableObject != null)
+        if (CurrentPlaceableObject != KeyCode.Mouse1)
         {
           Destroy(CurrentPlaceableObject);
         }
@@ -80,9 +80,13 @@ public class mousemanager : MonoBehaviour
     private void moveObjecttomouse()
     {
       CurrentPlaceableObject.layer = 2;
+<<<<<<< HEAD
       Camera theCamera = Camera.main;
 
       Ray ray = theCamera.ScreenPointToRay(Input.mousePosition);
+=======
+      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+>>>>>>> cede023ab01e8a38add5d2ceb96fb57b2e27d281
       RaycastHit hitInfo;
       if (Physics.Raycast(ray, out hitInfo))
        {

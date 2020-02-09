@@ -1,26 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿//using System.Collections;
+//using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class startPress : MonoBehaviour
 {
     public GameObject start = null;
+    public string GameSceneName;
 
     Ray ray;
     RaycastHit hit;
 
-    public void OnMouseDown()
+    void Update()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
+        if (Input.GetMouseButtonDown(0))
         {
-            print(hit.collider.name);
-            if (hit.collider.gameObject == start)
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
             {
-                print ("hit");
-                SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Single);
+                print(hit.collider.name);
+                if (hit.collider.gameObject == start)
+                {
+                    print("hit");
+                    SceneManager.LoadScene(GameSceneName, LoadSceneMode.Single);
+                }
             }
         }
+
     }
 }
