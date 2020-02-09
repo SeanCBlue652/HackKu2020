@@ -16,7 +16,6 @@ public class ProcessGame : MonoBehaviour
     void Start()
     {
         _handler = Stats.GetComponent<handleStats>();
-        printMods();
     }
     
     void Update()
@@ -32,14 +31,6 @@ public class ProcessGame : MonoBehaviour
         if (Time.time > _lastUpdateTime + 20)
         {
             needsUpdate = true;
-        }
-    }
-
-    private void printMods(){
-        _handler.updateFunds(StatModType.Flat, 5f);
-        ReadOnlyCollection<StatModifier> _mods = _handler.getStatModifiers("Funds");
-        foreach( StatModifier _mod in _mods) {
-            print(_mod.ModToString());
         }
     }
 
