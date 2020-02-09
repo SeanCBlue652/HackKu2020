@@ -6,27 +6,27 @@ public class BuildingHandlerScript : MonoBehaviour
 {
     public BuildingHandlerScript(){}
 
-    public float GetPrices(Building.building)
+    public float GetPrices(Building _building)
     {
-      return(Building.GetBuildingprice());
+      return(_building.GetBuildingprice());
     }
 
-    public float Getpower(Building.building)
+    public float Getpower(Building _building)
     {
       return(Building.GetBuildingpower());
     }
 
-    public float Getpop(Building.building)
+    public float Getpop(Building _building)
     {
       return(Building.GetBuildingpopulation());
     }
 
-    public float Getincome(Building.building)
+    public float Getincome(Building _building)
     {
       return(Building.GetBuildingincome());
     }
 
-    public GameObject GetBuilding(Building.building)
+    public GameObject GetBuilding(Building _building)
     {
       return(Building.GettheBuilding());
     }

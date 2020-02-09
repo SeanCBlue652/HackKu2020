@@ -40,6 +40,7 @@ namespace Sean.CharacterStats
             }
             else
             {
+                output += " ";
                 output += Source.ToString();
             }
             output += "\nValue: " + Value.ToString() + "\nType: ";
