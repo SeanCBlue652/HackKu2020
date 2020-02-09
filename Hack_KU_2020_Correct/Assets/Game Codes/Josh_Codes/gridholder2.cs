@@ -29,7 +29,7 @@ public class gridholder2 : MonoBehaviour
           float posX = col * tilesize;
           float posY = row * -tilesize;
 
-          tile.transform.position = new Vector3(posY, 1, posX);
+          tile.transform.position = new Vector3(posY, 100, posX+100);
         }
       }
       Destroy(referenceTile);
