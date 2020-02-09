@@ -79,6 +79,7 @@ public class mousemanager : MonoBehaviour
 
     private void moveObjecttomouse()
     {
+      CurrentPlaceableObject.layer = 2;
       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
       RaycastHit hitInfo;
       if (Physics.Raycast(ray, out hitInfo))
@@ -99,6 +100,7 @@ public class mousemanager : MonoBehaviour
     {
       if (Input.GetMouseButtonDown(0))
       {
+        CurrentPlaceableObject.layer = 0;
         CurrentPlaceableObject = null;
       }
     }
