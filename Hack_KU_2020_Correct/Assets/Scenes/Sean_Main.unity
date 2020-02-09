@@ -1842,6 +1842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e49097cb1c8d94f90047692e8db276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlacementObject: {fileID: 964825001}
+  StatsHandler: {fileID: 520317855}
 --- !u!4 &405306507
 Transform:
   m_ObjectHideFlags: 0
