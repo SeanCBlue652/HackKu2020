@@ -82,6 +82,13 @@ public class handleStats : MonoBehaviour
         }
 
     }
+
+    public void updateStatsFlat(float _funds, float _power, float _pop, float _income, GameObject _source) {
+        updateFunds(StatModType.Flat, _funds*-1, _source);
+        updatePower(StatModType.Flat, _power, _source);
+        updatePopulation(StatModType.Flat, _pop, _source);
+        updateIPM(StatModType.Flat, _income, _source);
+    }
     public void updateFunds(StatModType _type, float _value)
     {
         StatModifier _mod = new StatModifier(_value, _type);
@@ -129,5 +136,12 @@ public class handleStats : MonoBehaviour
         StatModifier _mod = new StatModifier(_value, _type, _source);
         InPerMin.AddModifier(_mod);
         updateAll();
+    }
+
+    public void removeAllModsFromSource(object source){
+        Funds.RemoveAllModifiersFromSource(source);
+        Power.RemoveAllModifiersFromSource(source);
+        Population.RemoveAllModifiersFromSource(source);
+        InPerMin.RemoveAllModifiersFromSource(source);
     }
 }

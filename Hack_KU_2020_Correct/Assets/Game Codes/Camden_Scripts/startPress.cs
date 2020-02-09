@@ -11,7 +11,7 @@ public class startPress : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -22,9 +22,10 @@ public class startPress : MonoBehaviour
                 if (hit.collider.gameObject == start)
                 {
                     print("hit");
-                    SceneManager.LoadScene(GameSceneName, LoadSceneMode.Single);
+                    SceneManager.LoadScene("Sean_Main", LoadSceneMode.Single);
                 }
             }
+        
         }
 
     }
