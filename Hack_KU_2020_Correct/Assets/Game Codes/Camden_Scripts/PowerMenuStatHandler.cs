@@ -17,9 +17,4 @@ public class PowerMenuStatHandler : MonoBehaviour
     }
     private ReadOnlyCollection<StatModifier> _mods  = Camden.getStatModifiers("Power");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
