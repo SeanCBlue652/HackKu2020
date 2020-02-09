@@ -1859,8 +1859,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlacementObject: {fileID: 964825001}
   StatsHandler: {fileID: 520317855}
-  Stats: {fileID: 520317856}
-  MouseManager: {fileID: 964825003}
 --- !u!4 &405306507
 Transform:
   m_ObjectHideFlags: 0

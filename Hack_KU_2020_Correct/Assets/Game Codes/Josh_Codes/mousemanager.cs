@@ -1,22 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Sean;
+using Sean.BuildingPackage;
 
 public class mousemanager : MonoBehaviour
 {
-    void Start()
-    {
-        /*for (int i = 0; i < Buildingparts.Length; i++)
-        {
-          GameObject Buildings = Buildingparts[i];
-          GameObject buttonGameObject = (GameObject)Instantiate(Buildingparts, this.transform);
-          theButton.onClick.AddListener( () => {Spawnthings = Buildings;} );
-        }*/
-    }
 
-    [SerializeField]
-    private GameObject Spawnthings;
+    public GameObject Spawnthings;
 
     [SerializeField]
     private KeyCode newObjectHotKey = KeyCode.Mouse1;
@@ -28,19 +18,16 @@ public class mousemanager : MonoBehaviour
 
     private GameObject _spawnthings;
 
-    public void setspawnthing(GameObject inputbulding)
+    public void setspawnthing(Building inputbulding)
     {
-        _spawnthings = inputbulding;
+        Spawnthings = inputbulding.GettheBuilding();
+        _spawnthings = inputbulding.GettheBuilding();
         print(_spawnthings);
     }
 
-    public mousemanager()
+    void Start()
     {
         _spawnthings = Spawnthings;
-    }
-
-    void Start(){
-      _spawnthings = Spawnthings;
     }
     // Update is called once per frame
     private void Update()
