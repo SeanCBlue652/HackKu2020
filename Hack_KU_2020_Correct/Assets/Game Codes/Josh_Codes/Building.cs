@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class Building : MonoBehaviour
+[Serializable]
+public class Building
 {
-  private float buildingprice = float.MinValue;
-  private float buildingpower = float.MinValue;
-  private float buildingpopulation = float.MinValue;
-  private float buildingincome = float.MinValue;
+  private float buildingPrice = float.MinValue;
+  private float buildingPower = float.MinValue;
+  private float buildingPopulation = float.MinValue;
+  private float buildingIncome = float.MinValue;
   private GameObject theBuilding = null;
 
   public Building(){}
@@ -15,30 +17,30 @@ public class Building : MonoBehaviour
   public Building(GameObject Buldingpath, float Bprice, float Bpower , float Bpop, float Bincome)
   {
     theBuilding = Buldingpath;
-    buildingprice = Bprice;
-    buildingpower = Bpower;
-    buildingpopulation = Bpop;
-    buildingincome = Bincome;
+    buildingPrice = Bprice;
+    buildingPower = Bpower;
+    buildingPopulation = Bpop;
+    buildingIncome = Bincome;
   }
 
   public float GetBuildingprice()
   {
-    return(buildingprice);
+    return(buildingPrice);
   }
 
   public float GetBuildingpower()
   {
-    return(buildingpower);
+    return(buildingPower);
   }
 
   public float GetBuildingpopulation()
   {
-    return(buildingpopulation);
+    return(buildingPopulation);
   }
 
   public float GetBuildingincome()
   {
-    return(buildingincome);
+    return(buildingIncome);
   }
 
   public GameObject GettheBuilding()

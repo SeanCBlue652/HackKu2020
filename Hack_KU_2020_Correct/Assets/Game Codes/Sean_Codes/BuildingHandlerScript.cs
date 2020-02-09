@@ -1,33 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 public class BuildingHandlerScript : MonoBehaviour
 {
-    public BuildingHandlerScript(){}
 
-    public float GetPrices(Building _building)
+    private readonly List<Building> _buildingList;
+    public readonly ReadOnlyCollection<Building> BuildingList;
+
+    public BuildingHandlerScript()
     {
-      return(_building.GetBuildingprice());
+        _buildingList = new List<Building>();
+        BuildingList = _buildingList.AsReadOnly();
     }
 
-    public float Getpower(Building _building)
-    {
-      return(_building.GetBuildingpower());
-    }
+public float GetPrices(Building _building)
+{
+    return (_building.GetBuildingprice());
+}
 
-    public float Getpop(Building _building)
-    {
-      return(_building.GetBuildingpopulation());
-    }
+public float GetPower(Building _building)
+{
+    return (_building.GetBuildingpower());
+}
 
-    public float Getincome(Building _building)
-    {
-      return(_building.GetBuildingincome());
-    }
+public float GetPop(Building _building)
+{
+    return (_building.GetBuildingpopulation());
+}
 
-    public GameObject GetBuilding(Building _building)
-    {
-      return(_building.GettheBuilding());
-    }
+public float GetIncome(Building _building)
+{
+    return (_building.GetBuildingincome());
+}
+
+public GameObject GetBuilding(Building _building)
+{
+    return (_building.GettheBuilding());
+}
+
+
 }
