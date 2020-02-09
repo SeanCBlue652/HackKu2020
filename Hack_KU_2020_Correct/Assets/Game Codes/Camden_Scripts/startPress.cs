@@ -6,27 +6,34 @@ using UnityEngine.SceneManagement;
 public class startPress : MonoBehaviour
 {
     public GameObject start = null;
-    public string GameSceneName;
+
+    private bool started = (SceneManager.GetActiveScene().name == "Sean_Main");
+    //public string GameSceneName;
 
     Ray ray;
     RaycastHit hit;
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!started)
         {
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
+            if (Input.GetMouseButtonDown(0))
             {
-                print(hit.collider.name);
-                if (hit.collider.gameObject == start)
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit))
                 {
-                    print("hit");
-                    SceneManager.LoadScene("Sean_Main", LoadSceneMode.Single);
+                    print(hit.collider.name);
+                    if (hit.collider.gameObject == start)
+                    {
+                        print("hit");
+                        started = true;
+                        SceneManager.LoadScene("Sean_Main", LoadSceneMode.Single);
+                    }
                 }
+
             }
-        
         }
+
 
     }
 }

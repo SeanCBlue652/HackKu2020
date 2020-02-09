@@ -29,47 +29,47 @@ public class buyBuilding : MonoBehaviour
 
     public void buyRoadStraight()
     {
-        _handler.shopCheckout(BuildingType.Road_Straight, RoadStraight);
+        _handler.shopCheckout(BuildingType.Road_Straight, Instantiate(RoadStraight));
     }
     public void buyRoadCross()
     {
-        _handler.shopCheckout(BuildingType.Road_Cross, RoadCross);
+        _handler.shopCheckout(BuildingType.Road_Cross, Instantiate(RoadCross));
     }
     public void buyRoadCorner()
     {
-        _handler.shopCheckout(BuildingType.Road_Corner, RoadCorner);
+        _handler.shopCheckout(BuildingType.Road_Corner, Instantiate(RoadCorner));
     }
     public void buyRoadTee()
     {
-        _handler.shopCheckout(BuildingType.Road_Tee, RoadTee);
+        _handler.shopCheckout(BuildingType.Road_Tee, Instantiate(RoadTee));
     }
     public void buyCoalPower()
     {
-        _handler.shopCheckout(BuildingType.Coal_Power, CoalPower);
+        _handler.shopCheckout(BuildingType.Coal_Power, Instantiate(CoalPower));
     }
     public void buyWatertower()
     {
-        _handler.shopCheckout(BuildingType.Watertower, Watertower);
+        _handler.shopCheckout(BuildingType.Watertower, Instantiate(Watertower));
     }
     public void buyWarehouse()
     {
-        _handler.shopCheckout(BuildingType.Warehouse, Warehouse);
+        _handler.shopCheckout(BuildingType.Warehouse, Instantiate(Warehouse));
     }
     public void buyHouse()
     {
-        _handler.shopCheckout(BuildingType.House, House);
+        _handler.shopCheckout(BuildingType.House, Instantiate(House));
     }
     public void buyHouse2()
     {
-        _handler.shopCheckout(BuildingType.House_Alt, House2);
+        _handler.shopCheckout(BuildingType.House_Alt, Instantiate(House2));
     }
     public void buySkyscraper()
     {
-        _handler.shopCheckout(BuildingType.Skyscraper, Skyscraper);
+        _handler.shopCheckout(BuildingType.Skyscraper, Instantiate(Skyscraper));
     }
     public void buyApartment()
     {
-        _handler.shopCheckout(BuildingType.Apartment, Apartment);
+        _handler.shopCheckout(BuildingType.Apartment, Instantiate(Apartment));
     }
 
 }
