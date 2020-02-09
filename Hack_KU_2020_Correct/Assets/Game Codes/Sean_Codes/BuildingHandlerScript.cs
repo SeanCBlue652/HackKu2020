@@ -84,43 +84,43 @@ namespace Sean.BuildingPackage
             switch (_type)
             {
                 case BuildingType.Road_Straight:
-                    _building = new Building(_object, 5f, 0f, 0f, 1f, StatsHandler);
+                    _building = new Building(_object, 2f, 0f, 0f, 1f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.Road_Cross:
-                    _building = new Building(_object, 5f, 0f, 0f, 1f, StatsHandler);
+                    _building = new Building(_object, 2f, 0f, 0f, 1f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.Road_Tee:
-                    _building = new Building(_object, 5f, 0f, 0f, 1f, StatsHandler);
+                    _building = new Building(_object, 2f, 0f, 0f, 1f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.Road_Corner:
-                    _building = new Building(_object, 5f, 0f, 0f, 1f, StatsHandler);
+                    _building = new Building(_object, 2f, 0f, 0f, 1f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.House:
-                    _building = new Building(_object, 200f, -25f, 5f, 10f, StatsHandler);
+                    _building = new Building(_object, 200f, -25f, 5f, 50f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.House_Alt:
-                    _building = new Building(_object, 300f, -35f, 10f, 25f, StatsHandler);
+                    _building = new Building(_object, 300f, -35f, 10f, 100f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.Skyscraper:
-                    _building = new Building(_object, 1100f, -200f, 500f, 140f, StatsHandler);
+                    _building = new Building(_object, 800f, -200f, 500f, 350f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
@@ -132,13 +132,13 @@ namespace Sean.BuildingPackage
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.Power_Line:
-                    _building = new Building(_object, 15f, 15f, 0f, -10f, StatsHandler);
+                    _building = new Building(_object, 15f, 15f, 0f, -5f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.Warehouse:
-                    _building = new Building(_object, 500f, -150f, 150f, 100f, StatsHandler);
+                    _building = new Building(_object, 500f, -150f, 150f, 200f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
@@ -150,7 +150,7 @@ namespace Sean.BuildingPackage
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
                     break;
                 case BuildingType.Apartment:
-                    _building = new Building(_object, 500f, -100f, 400f, 1f, StatsHandler);
+                    _building = new Building(_object, 600f, -100f, 400f, 300f, StatsHandler);
                     _buildingList.Add(_building);
                     updateCurrentPlacementBuilding(_building);
                     _stats.updateStatsFlat(_building.GetBuildingprice(), _building.GetBuildingpower(), _building.GetBuildingpopulation(), _building.GetBuildingincome(), _building.GettheBuilding());
