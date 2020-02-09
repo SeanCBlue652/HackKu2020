@@ -6,46 +6,55 @@ using UnityEngine;
 [Serializable]
 public class Building
 {
-  private float buildingPrice = float.MinValue;
-  private float buildingPower = float.MinValue;
-  private float buildingPopulation = float.MinValue;
-  private float buildingIncome = float.MinValue;
-  private GameObject theBuilding = null;
+    private float buildingPrice = float.MinValue;
+    private float buildingPower = float.MinValue;
+    private float buildingPopulation = float.MinValue;
+    private float buildingIncome = float.MinValue;
+    private GameObject theBuilding = null;
 
-  public Building(){}
+    private handleStats _stats;
 
-  public Building(GameObject Buldingpath, float Bprice, float Bpower , float Bpop, float Bincome)
-  {
-    theBuilding = Buldingpath;
-    buildingPrice = Bprice;
-    buildingPower = Bpower;
-    buildingPopulation = Bpop;
-    buildingIncome = Bincome;
-  }
+    public Building() { }
 
-  public float GetBuildingprice()
-  {
-    return(buildingPrice);
-  }
+    public Building(GameObject Buldingpath, float Bprice, float Bpower, float Bpop, float Bincome, GameObject _handleStats)
+    {
+        theBuilding = Buldingpath;
+        buildingPrice = Bprice;
+        buildingPower = Bpower;
+        buildingPopulation = Bpop;
+        buildingIncome = Bincome;
+        _stats = _handleStats.GetComponent<handleStats>();
+    }
 
-  public float GetBuildingpower()
-  {
-    return(buildingPower);
-  }
+    ~Building()
+    {
+      _stats.removeAllModsFromSource(theBuilding);
+    }
 
-  public float GetBuildingpopulation()
-  {
-    return(buildingPopulation);
-  }
 
-  public float GetBuildingincome()
-  {
-    return(buildingIncome);
-  }
+    public float GetBuildingprice()
+    {
+        return (buildingPrice);
+    }
 
-  public GameObject GettheBuilding()
-  {
-    return(theBuilding);
-  }
+    public float GetBuildingpower()
+    {
+        return (buildingPower);
+    }
+
+    public float GetBuildingpopulation()
+    {
+        return (buildingPopulation);
+    }
+
+    public float GetBuildingincome()
+    {
+        return (buildingIncome);
+    }
+
+    public GameObject GettheBuilding()
+    {
+        return (theBuilding);
+    }
 
 }
