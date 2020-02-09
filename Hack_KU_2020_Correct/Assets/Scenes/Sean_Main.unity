@@ -1724,7 +1724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a309d491b489db4da081b0b50154e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExitConfirmationButton: {fileID: 0}
+  ExitConfirmationButton: {fileID: 1842790974}
 --- !u!114 &497556048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1737,9 +1737,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289d1a51845d5ec4f8bbcddfec8bf38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Menu: {fileID: 0}
-  OpenButton: {fileID: 0}
-  CloseButton: {fileID: 0}
+  Menu: {fileID: 2034753134}
+  OpenButton: {fileID: 1061228591}
+  CloseButton: {fileID: 1509437931}
 --- !u!1 &520317855
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,6 +3308,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146350402}
   m_CullTransparentMesh: 0
+--- !u!1 &1221661430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6866096821821962151, guid: 9e89437017344014b875d90cd242b6e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 25141246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1358433027
 GameObject:
   m_ObjectHideFlags: 0
@@ -3360,7 +3366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a309d491b489db4da081b0b50154e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExitConfirmationButton: {fileID: 0}
+  ExitConfirmationButton: {fileID: 1842790974}
 --- !u!114 &1358433030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3590,7 +3596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375a5e3c911f57143b366c09f90cff5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plains: {fileID: 0}
+  plains: {fileID: 1221661430}
 --- !u!4 &1409997868
 Transform:
   m_ObjectHideFlags: 0
