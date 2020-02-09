@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class Building
+public class Building 
 {
     private float buildingPrice = float.MinValue;
     private float buildingPower = float.MinValue;
